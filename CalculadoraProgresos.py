@@ -111,7 +111,8 @@ button_2 = Button(frame3, font=('Consolas', '10', 'bold'), borderwidth=5, text="
 text7 = Label(frame3, font=('Consolas', '12') , bg="#00FF80" , text="------RESULTADO------")\
     .grid(row= 10, column= 1)
 
-result = Label(frame3, width=30, font=('Consolas', '13', 'bold'), borderwidth=10, justify="center", bg="#00FF80", fg="black")\
+result = Label(frame3, width=30, font=('Consolas', '13', 'bold'), borderwidth=10, justify="center", bg="#00FF80",
+                fg="black")\
 
 
 
