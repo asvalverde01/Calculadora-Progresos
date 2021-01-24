@@ -35,28 +35,28 @@ def fun_clear():
 root = Tk()
 root.title("Calculadora de progresos")
 
+
 #Informacion sobre el programa presentada en la parte superior
-saludo = Label(root, bg="#00FF80", font=('Consolas', '15', 'bold'), width=40, text="---UNIVERSIDAD DE LAS AMERICAS---")\
+saludo = Label(root, bg="#00678B", fg="red", font=('Consolas', '20', 'bold'), width=40, text="-UNIVERSIDAD DE LAS AMERICAS-")\
     .grid(row=0, column=1)
-saludo1 = Label(root, bg="#00FF80", font=('Consolas', '15', 'bold'), width=40, text="----CALCULADORA DE PROGRESOS----")\
+saludo1 = Label(root, bg="#00678B", fg="white", font=('Consolas', '20', 'bold'), width=40, text="--CALCULADORA DE PROGRESOS--")\
     .grid(row=1, column=1)
-informacion = Label(root, bg="#00FF80", font=('Consolas', '13'), width=40, text="Bienvenido! Usa esta calculadora\n "
+informacion = Label(root, bg="#00678B", font=('Consolas', '15', 'bold'), width=40, text="Bienvenido! Usa esta calculadora\n "
                                                                                "para calcular promedio o predecir \n"
-                                                                                "la nota que necesitas para pasar.")\
+                                                                                "la nota que necesitas para pasar.\n")\
 .grid(row=3, column=1)
 
 
 
-
 #Texto y recoleccion de datos primera seccion
-frame1 = LabelFrame(root, font=('Consolas', '13', 'bold') , text="En caso de conocer las 3 notas\n"
-                               "use esta sección", bg="#00FF80")
+frame1 = LabelFrame(root, font=('Consolas', '15', 'bold') , text="En caso de conocer las 3 notas\n"
+                               "use esta sección", bg="#00678B", fg="white")
 
-text1 = Label(frame1, font=('Consolas', '12') , bg="#00FF80" , text="\nIngrese la primera nota: ")\
+text1 = Label(frame1, font=('Consolas', '15') , bg="#00678B" , text="\nIngrese la primera nota: ")\
     .grid(row= 6, column= 0)
-text2 = Label(frame1, font=('Consolas', '12') , bg="#00FF80" , text="\nIngrese la segunda nota: ")\
+text2 = Label(frame1, font=('Consolas', '15') , bg="#00678B" , text="\nIngrese la segunda nota: ")\
     .grid(row= 8, column= 0)
-text3 = Label(frame1, font=('Consolas', '12') , bg="#00FF80" , text="\nIngrese la tercera nota: ")\
+text3 = Label(frame1, font=('Consolas', '15') , bg="#00678B" , text="\nIngrese la tercera nota: ")\
     .grid(row= 10, column= 0)
 
 get1 = Entry(frame1, width= 10, borderwidth= 8, bg="#00CC00", justify="center", fg="black")
@@ -65,24 +65,24 @@ get3 = Entry(frame1, width= 10, borderwidth= 8, bg="#00CC00", justify="center", 
 
 
 #Texto y recoleccion de datos segunda seccion
-frame2 = LabelFrame(root, font=('Consolas', '13', 'bold') , text="En caso de conocer\n"
+frame2 = LabelFrame(root, font=('Consolas', '15', 'bold') , text="En caso de conocer\n"
                                                          " solamente 2 notas\n"
-                               "use esta sección", bg="#00FF80")
+                               "use esta sección", bg="#00678B", fg="white")
 
-text4 = Label(frame2, font=('Consolas', '12') , bg="#00FF80" , text="\nIngrese la primera nota: ")\
+text4 = Label(frame2, font=('Consolas', '15') , bg="#00678B" , text="\nIngrese la primera nota: ")\
     .grid(row= 6, column= 2)
-text5 = Label(frame2, font=('Consolas', '12') , bg="#00FF80" , text="\nIngrese la segunda nota: ")\
+text5 = Label(frame2, font=('Consolas', '15') , bg="#00678B" , text="\nIngrese la segunda nota: ")\
     .grid(row= 8, column= 2)
 
 
 get4 = Entry(frame2, width= 10, borderwidth= 8, bg="#00CC00", justify="center", fg="black")
 get5 = Entry(frame2, width= 10, borderwidth= 8, bg="#00CC00", justify="center", fg="black")
 
-instru = LabelFrame(root, font=('Consolas', '12',  'bold') , text="Instrucciones", bg="#00FF80")
+instru = LabelFrame(root, font=('Consolas', '15',  'bold') , text="Instrucciones", bg="#00678B", fg="white")
 #instruL = Label(instru, font=('Consolas', '10') , text="                                           "
      #                                                  "                                           "
-   #                                                    "                                           ", bg="#00FF80")
-instruLin = Label(instru, font=('Consolas', '10') , text="Este programa ha sido desarollado con la "
+   #                                                    "                                           ", bg="#00678B")
+instruLin = Label(instru, font=('Consolas', '12') , text="Este programa ha sido desarollado con la "
                                                          "metodología de calificación de la UDLA\n"
                                                          "-----------------------------------------------------------\n"
                                                          "Progreso 1 = %25     |     Progreso 2 = %35"
@@ -90,28 +90,28 @@ instruLin = Label(instru, font=('Consolas', '10') , text="Este programa ha sido 
                                                          "-----------------------------------------------------------\n"
                                                          "Si conoce las 3 notas, por favor, use la seccion izquierda.\n"
                                                          "Si conoce 2 notas, por favor, use la seccion derecha "
-                                                         "para calcular nota necesaria.", bg="#00FF80")
+                                                         "para calcular nota necesaria.", bg="#00678B")
 
 
 #Seccion de resultados
-frame3 = LabelFrame(root, font=('Consolas', '13', 'bold') , text="Resultados", bg="#00FF80")
+frame3 = LabelFrame(root, font=('Consolas', '16', 'bold') , text="Resultados", bg="#00678B", fg="white")
 
-text6 = Label(frame3, font=('Consolas', '12') , bg="#00FF80" , text="\nPresione para calcular el progreso:")\
+text6 = Label(frame3, font=('Consolas', '15') , bg="#00678B" , text="\nPresione para calcular el progreso:")\
     .grid(row= 6, column= 1)
 
-button_1 = Button(frame3, font=('Consolas', '10', 'bold'), borderwidth=5, text="Calcular nota final", padx=50,
-                  pady=6, fg="Black", bg="#00CC00",command = calculo1)
+button_1 = Button(frame3, font=('Consolas', '15', 'bold'), borderwidth=5, text="Calcular nota final", padx=50,
+                  pady=6, fg="white", bg="#00CC00",command = calculo1)
 
-text7 = Label(frame3, font=('Consolas', '12') , bg="#00FF80" , text="\nPresione para calcular el progreso:")\
+text7 = Label(frame3, font=('Consolas', '15') , bg="#00678B" , text="\nPresione para calcular el progreso:")\
     .grid(row= 8, column= 1)
 
-button_2 = Button(frame3, font=('Consolas', '10', 'bold'), borderwidth=5, text="Calcular nota necesaria", padx=38,
-                  pady=6, fg="Black", bg="#00CC00", command = calculo2)
+button_2 = Button(frame3, font=('Consolas', '15', 'bold'), borderwidth=5, text="Calcular nota necesaria", padx=38,
+                  pady=6, fg="white", bg="#00CC00", command = calculo2)
 
-text7 = Label(frame3, font=('Consolas', '12') , bg="#00FF80" , text="------RESULTADO------")\
+text7 = Label(frame3, font=('Consolas', '14', 'bold') , bg="#00678B" , text="------RESULTADO------")\
     .grid(row= 10, column= 1)
 
-result = Label(frame3, width=30, font=('Consolas', '13', 'bold'), borderwidth=10, justify="center", bg="#00FF80",
+result = Label(frame3, width=30, font=('Consolas', '15', 'bold'), borderwidth=10, justify="center", bg="#00678B",
                 fg="black")\
 
 
@@ -128,14 +128,14 @@ get5.grid(row = 9, column = 2)
 
 frame3.grid(row= 5, column = 1)
 
-instru.grid(row= 12, columnspan=3 )
+instru.grid(row= 15, columnspan=3 )
 #instruL.pack()
-instruLin.grid(row= 13, columnspan = 2)
+instruLin.grid(row= 15, columnspan = 2)
 
 button_1.grid(row=7, column=1)
 button_2.grid(row=9, column=1)
 result.grid(row= 11, column= 1)
 #Sentencia repetiviva que permite ejecutar el programa
-root.configure(bg="#00FF80")
+root.configure(bg="#00678B")
 root.resizable(0, 0)
 root.mainloop()
