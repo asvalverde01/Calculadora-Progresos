@@ -137,6 +137,5 @@ button_2.grid(row=9, column=1)
 result.grid(row= 11, column= 1)
 #Sentencia repetiviva que permite ejecutar el programa
 root.configure(bg="#00678B")
-root.resizable(0, 0)
 #root.resizable(0, 0)
 root.mainloop()
