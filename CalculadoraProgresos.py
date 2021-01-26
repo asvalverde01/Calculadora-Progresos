@@ -21,9 +21,9 @@ def calculo1():
             result.configure(text = "La nota promedio es: {:.2f}".format(resultado))
     except:
         result.configure(text = "Ingrese los datos necesarios")
-        resultStatus.configure(text = "Operación Fallida")
+        resultStatus.configure(text = "---Operación Fallida---")
     else:
-        resultStatus.configure(text = "Operación Exitosa")
+        resultStatus.configure(text = "---Operación Exitosa---")
     
 #La funcion calculo2() lee las dos notas ingresadas para calcular el promedio necesario para sacar 6
 #   Muestra un mensaje segun la nota obtenida
@@ -41,9 +41,9 @@ def calculo2():
             result.configure(text="Se requiere una nota de:  {:.2f}".format(tot))
     except:
         result.configure(text = "Ingrese los datos necesarios")
-        resultStatus.configure(text = "Operación Fallida")
+        resultStatus.configure(text = "---Operación Fallida---")
     else:
-        resultStatus.configure(text = "Operación Exitosa")
+        resultStatus.configure(text = "---Operación Exitosa---")
 
 #def fun_clear():
  #   result.delete(0, END)
@@ -57,16 +57,14 @@ saludo = Label(root, bg="#00678B", fg="red", font=('Consolas', '20', 'bold'), wi
     .grid(row=0, column=1)
 saludo1 = Label(root, bg="#00678B", fg="white", font=('Consolas', '20', 'bold'), width=40, text="--CALCULADORA DE PROGRESOS--")\
     .grid(row=1, column=1)
-informacion = Label(root, bg="#00678B", font=('Consolas', '17', 'bold'), width=40, text="Bienvenido! Usa este programa\n "
-                                                                               "para calcular el promedio o la nota que \n"
-                                                                                " necesitas en el tercer progreso.\n")\
-.grid(row=3, column=1)
+#informacion = Label(root, bg="#00678B", font=('Consolas', '17', 'bold'), width=40, text="Bienvenido! Programa para calcular notas\n")\
+#.grid(row=2, column = 1)
 
 
 
 #Texto y recoleccion de datos primera seccion
-frame1 = LabelFrame(root, font=('Consolas', '17', 'bold') , text="En caso de conocer las 3 notas\n"
-                               "use esta sección", bg="#00678B", fg="white")
+frame1 = LabelFrame(root, font=('Consolas', '17', 'bold') , text="En caso de conocer las\n"
+                               " 3 notas, use esta sección", bg="#00678B", fg="white")
 
 text1 = Label(frame1, font=('Consolas', '17') , bg="#00678B" , text="\nIngrese la primera nota: ")\
     .grid(row= 6, column= 0)
@@ -85,9 +83,9 @@ frame2 = LabelFrame(root, font=('Consolas', '17', 'bold') , text="En caso de con
                                                          " solamente 2 notas\n"
                                "use esta sección", bg="#00678B", fg="white")
 
-text4 = Label(frame2, font=('Consolas', '17') , bg="#00678B" , text="\nIngrese la primera nota: ")\
+text4 = Label(frame2, font=('Consolas', '17') , bg="#00678B" , text="\nIngrese la primera nota:")\
     .grid(row= 6, column= 2)
-text5 = Label(frame2, font=('Consolas', '17') , bg="#00678B" , text="\nIngrese la segunda nota: ")\
+text5 = Label(frame2, font=('Consolas', '17') , bg="#00678B" , text="\nIngrese la segunda nota:")\
     .grid(row= 8, column= 2)
 
 
@@ -131,6 +129,7 @@ instruLin = Label(instru, font=('Consolas', '13') , text="Este programa ha sido 
                                                          "para calcular nota necesaria.", bg="#00678B")
 
 
+
 #Zona derecha
 frame1.grid(row= 5, column = 0)
 get1.grid(row = 7, column = 0)
@@ -150,10 +149,10 @@ result.grid(row = 11, column = 1)
 resultStatus.grid(row = 12, column = 1)
 
 #Zona instrucciones
-instru.grid(row= 14, columnspan=3 )
-instruLin.grid(row= 17, columnspan = 3)
+instru.grid(row= 14, columnspan = 3 )
+instruLin.grid(row= 17)
 
 #Sentencia repetiviva que permite ejecutar el programa
 root.configure(bg="#00678B")
-root.resizable(0, 0)
+root.resizable(0,0)
 root.mainloop()
