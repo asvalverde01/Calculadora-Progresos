@@ -45,10 +45,57 @@ def calculo2():
     else:
         resultStatus.configure(text = "---Operación Exitosa---")
 
+def ayuda():
+    try:
+        ayudaGUI = Tk()
+        ayudaGUI.title("Acerca de")
+        text1a = Label(ayudaGUI, font=('Consolas', 13),
+                        text = "ESTE PROGRAMA HA SIDO DESSAROLLADO POR\n"
+                        "Alberto Sebastián Valverde Gonzalez\n"
+                        "para el proyecto final de la clase de algoritmos")
+        
+        contactos = LabelFrame(ayudaGUI, font=('Consolas', "13", 'bold'), text = "CONTACTOS")
+        text2a = Label(contactos, font=('Consolas', 13),
+                        text = "Correo institucional:\n")
+        correo = Entry(contactos, font=('Consolas', '12'), width= 32, borderwidth= 5, 
+            justify="center", fg="black")
+        correo.insert(END, "sebastian.valverde@udla.edu.ec")
+
+
+        
+        text1a.grid(row = 1)
+        contactos.grid(row = 2)
+        text2a.grid(row = 3)
+        correo.grid(row = 4)
+        ayudaGUI.mainloop()
+    except:
+        resultStatus.configure(text = "---Operación Fallida---")
+
+def borrar():
+    get1.delete(0, END)
+    get2.delete(0, END)
+    get3.delete(0, END)
+    get4.delete(0, END)
+    get5.delete(0, END)
+    result.configure(text = "-----<>-----")
+    resultStatus.configure(text = "- - -Campos borrados - - -")
 
 #Inicio de la interfaz
 root = Tk()
 root.title("Calculadora de nota progresos UDLA -- por Sebastian Valverde")
+
+#Menu y sus opciones 
+menuBar = Menu(root)
+root.config(menu = menuBar)
+
+helpmenu = Menu(menuBar, tearoff = 0)
+helpmenu.add_command(label = "Acerca de", command = ayuda)
+menuBar.add_cascade(label =  "Ayuda", menu = helpmenu)
+
+clear = Menu(menuBar, tearoff = 0)
+clear.add_command(label = "Borrar Todo", command = borrar)
+menuBar.add_cascade(label =  "Borrar campos", menu = clear)
+
 
 #Informacion sobre el programa presentada en la parte superior
 saludo = Label(root, bg="#00678B",
