@@ -78,7 +78,7 @@ def borrar():
     get4.delete(0, END)
     get5.delete(0, END)
     result.configure(text = "-----<>-----")
-    resultStatus.configure(text = "- - -Campos borrados - - -")
+    resultStatus.configure(text = "- - - Campos borrados - - -")
 
 #Inicio de la interfaz
 root = Tk()
